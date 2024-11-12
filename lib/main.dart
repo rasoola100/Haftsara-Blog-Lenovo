@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:haftsara_blog/binding.dart';
+import 'package:haftsara_blog/route_manager/binding.dart';
 import 'package:haftsara_blog/components/colors_blog.dart';
-import 'package:haftsara_blog/components/route_name.dart';
+import 'package:haftsara_blog/route_manager/route_name.dart';
+import 'package:haftsara_blog/route_manager/pages.dart';
 import 'package:haftsara_blog/view/articles/article_manage_screen.dart';
 import 'package:haftsara_blog/view/articles/article_single_screen.dart';
 import 'package:haftsara_blog/view/articles/single_manage_article_screen.dart';
@@ -29,31 +30,8 @@ class HaftsaraBlog extends StatelessWidget {
       locale: const Locale('fa'),
       debugShowCheckedModeBanner: false,
       // initialBinding: RegisterBinding(),
-      getPages: [
-        GetPage(
-            name: RouteName.routeHomeScreen,
-            page: () => const HomeScreen(),
-            binding: RegisterBinding()),
-        GetPage(
-            name: RouteName.routeSingleArticleScreen,
-            page: () => ArticleSingleScreen(),
-            binding: ArticleBinding()),
-        GetPage(
-            name: RouteName.routeMangeArticleScreen,
-            page: () => ArticleManageScreen(),
-            binding: ArticleManageBinding()),
-        GetPage(
-            name: RouteName.routeSingleManageArticleScreen,
-            page: () => SingleManageArticleScreen(),
-            binding: SingleManageArticleBinding()),
-        GetPage(
-            name: RouteName.routePodcastListScreen,
-            page: () => PodcastListScreen(),
-            binding: PodcastBinding()),
-        GetPage(
-            name: RouteName.routePodcastSingleScreen,
-            page: () => PodcastSingleScreen()),
-      ],
+      initialRoute: RouteName.routeInitialRoute,
+      getPages: Pages.pages,
       // theme: ThemeData(primaryColor: Colors.green),
       home: const SplashScreen(),
       // home: PodcastSingleScreen(),

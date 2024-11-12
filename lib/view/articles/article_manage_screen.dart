@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:haftsara_blog/components/helper.dart';
-import 'package:haftsara_blog/components/route_name.dart';
+import 'package:haftsara_blog/route_manager/route_name.dart';
 import 'package:haftsara_blog/controllers/manage_article_controller.dart';
 import 'package:haftsara_blog/gen/assets.gen.dart';
 

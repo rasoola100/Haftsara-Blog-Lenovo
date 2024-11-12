@@ -26,10 +26,17 @@ class ArticleController extends GetxController {
 
   getArticleLisByCatId(String id) async {
     articleList.clear();
-    loading.value = false;
-    var userId = '';
-    var response = await DioService().getMethod(
-        '${UrlApiConstant.baseUrl}article/get.php?command=get_articles_with_tag_id&tag_id=$id&user_id=$userId');
+    loading.value = true;
+    // var userId = '';
+    final queryParam = {
+      'command': 'get_articles_with_tag_id',
+      'tag_id': id,
+      'user_id': '' 
+    };
+    final uri = Uri.http(UrlApiConstant.baseUrl, 'article/get.php?' , queryParam);
+    // var response = await DioService().getMethod(
+    //     '${UrlApiConstant.baseUrl}article/get.php?command=get_articles_with_tag_id&tag_id=$id&user_id=$userId');
+       var response = await DioService().getMethod(uri.toString());
         if(response.statusCode == 200) {
           response.data.forEach((element) {
             articleList.add(ArticleModel.fromJson(element));

@@ -6,4 +6,5 @@ class RouteName {
   static String routeSingleManageArticleScreen = '/manageSingleArticleScreen';
   static String routePodcastListScreen = '/podcastListScreen';
   static String routePodcastSingleScreen = '/podcastSingleScreen';
+  static String routeInitialRoute = '/';
 }

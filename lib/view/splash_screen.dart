@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:haftsara_blog/components/colors_blog.dart';
-import 'package:haftsara_blog/components/route_name.dart';
+import 'package:haftsara_blog/route_manager/route_name.dart';
 import 'package:haftsara_blog/gen/assets.gen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:haftsara_blog/view/home_screen.dart';

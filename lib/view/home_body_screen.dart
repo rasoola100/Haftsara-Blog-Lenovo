@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:haftsara_blog/components/colors_blog.dart';
-import 'package:haftsara_blog/components/route_name.dart';
+import 'package:haftsara_blog/route_manager/route_name.dart';
 import 'package:haftsara_blog/controllers/article_controller.dart';
 import 'package:haftsara_blog/controllers/home_controller.dart';
 import 'package:haftsara_blog/controllers/single_article_controller.dart';
